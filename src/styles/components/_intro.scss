@@ -1,12 +1,49 @@
 .intro {
-  padding-top: 96px;
+  position: relative;
+  margin-bottom: 137px;
+  padding-top: 260px;
+  padding-bottom: 48px;
   font-size: 16px;
   line-height: 29px;
+  background-image: url("../assets/images/background.png");
+  background-size: cover;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
   background-color: $c-royal-blue;
 
-  &__list {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 250px;
+  }
+
+  &::before {
+    left: 0;
+    background-image: linear-gradient(to right top, white 50%, transparent 50%);
+  }
+
+  &::after {
+    right: 0;
+    background-image: linear-gradient(to left top, white 50%, transparent 50%);
+  }
+
+  .site-wrapper {
+    position: relative;
+    max-width: 1600px;
+    width: 100%;
+  }
+
+  &__slider-wrapper {
+    max-width: 1152px;
+    margin: 0 auto 94px;
+  }
+
+  &__list,
+  &__control-list {
     @include reset-list;
-    margin-bottom: 80px;
   }
 
   &__item {
@@ -15,8 +52,21 @@
   }
 
   &__item-wrapper {
-    max-width: 634px;
+    position: relative;
     width: 100%;
+    padding-right: 47%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 74px;
+      right: 148px;
+      width: 149px;
+      height: 121px;
+      background-image: url("../assets/images/svg/twitter.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
   }
 
   &__item-title,
@@ -57,14 +107,115 @@
   }
 
   &__scroll-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1152px;
     margin: 0 auto;
   }
 
   &__scroll-description {
-    font-size: 26px;
-    line-height: 30px;
+    @include reset-margin;
+    padding-bottom: 23px;
+    font-size: 15px;
+    line-height: 18px;
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
+  }
+
+  &__scroll-button {
+    position: relative;
+    z-index: 1;
+    width: 61px;
+    height: 71px;
+    background-image: url("../assets/images/svg/scroll-button.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    transition: transform 0.3s;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 5px;
+      background-color: $c-pizazz;
+      border-radius: 5px;
+    }
+
+    &::before {
+      top: 33px;
+      left: 14px;
+      width: 20px;
+      transform: rotate(40deg);
+    }
+
+    &::after {
+      top: 32px;
+      right: 17px;
+      width: 16px;
+      transform: rotate(-40deg);
+    }
+
+    // hover
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+  }
+
+  // control
+  &__control-list {
+    position: absolute;
+    top: 78px;
+    right: 57px;
+  }
+
+  &__control-item {
+    margin-bottom: 6px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    input {
+      @include visually-hidden;
+    }
+
+    label {
+      display: inline-block;
+      vertical-align: top;
+      width: 14px;
+      height: 18px;
+      background-image: url("../assets/images/svg/icon-empty-button.svg");
+      background-size: 14px 18px;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      transition: transform 0.3s, opacity 0.3s;
+      cursor: pointer;
+
+      // hover
+      &:hover,
+      &:focus {
+        opacity: 0.7;
+      }
+
+      // active
+      &:active {
+        opacity: 0.7;
+      }
+    }
+
+    // checked
+    input:checked + label,
+    input:focus + label {
+      background-image: url("../assets/images/svg/icon-button.svg");
+      opacity: 1;
+      transform: scale(1.5);
+    }
   }
 }
