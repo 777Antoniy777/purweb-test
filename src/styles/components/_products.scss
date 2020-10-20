@@ -1,8 +1,12 @@
 .products {
-  padding-top: 22px;
+  padding-top: 32px;
   font-size: 15px;
-  line-height: 18px;
+  line-height: 22px;
   color: $c-gray;
+
+  .site-wrapper {
+    padding-left: 16px;
+  }
 
   &__title,
   &__item-title,
@@ -11,27 +15,54 @@
   }
 
   &__title {
-    padding-right: 122px;
+    @include reset-margin;
+    position: relative;
+    max-width: 992px;
+    width: 100%;
+    padding-right: 50px;
+    padding-bottom: 69px;
     font-size: 60px;
     line-height: 62px;
     font-weight: 700;
     text-align: right;
     text-transform: capitalize;
     color: $c-royal-blue;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 46px;
+      height: 12px;
+      background-color: $c-pizazz;
+    }
+
+    &::before {
+      top: -30px;
+      right: 2px;
+    }
+
+    &::after {
+      top: -13px;
+      right: -16px;
+      transform: rotate(90deg);
+    }
   }
 
   &__list {
     @include reset-list;
+    @include reset-margin;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    max-width: 914px;
   }
 
   &__item {
-    max-width: 286px;
-    width: 33%;
-    margin-right: 26px;
-    margin-bottom: 60px;
+    @include set-width($w-products-item-dt, $w-products-list-dt);
+    max-width: 285px;
+    margin-right: $m-products-item-dt * 100% / $w-products-list-dt;
+    margin-bottom: 54px;
 
     &:nth-child(3n),
     &:last-child {
@@ -39,9 +70,55 @@
     }
   }
 
+  &__decorative-wrapper {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--device {
+      background-image: url("../assets/images/svg/features-1.svg");
+      background-size: 142px 146px;
+      background-position-x: 40px;
+    }
+
+    &--user {
+      background-image: url("../assets/images/svg/features-2.svg");
+      background-size: 160px 150px;
+      background-position-x: 56px;
+    }
+
+    &--transaction {
+      background-image: url("../assets/images/svg/features-3.svg");
+      background-size: 150px 150px;
+      background-position-x: 60px;
+    }
+
+    &--methods {
+      background-image: url("../assets/images/svg/features-4.svg");
+      background-size: 132px 139px;
+      background-position-x: 57px;
+    }
+
+    &--hsm {
+      background-image: url("../assets/images/svg/features-5.svg");
+      background-size: 191px 127px;
+      background-position-x: 39px;
+    }
+
+    &--iot {
+      background-image: url("../assets/images/svg/features-6.svg");
+      background-size: 210px 108px;
+      background-position-x: 31px;
+      background-position-y: 35px;
+    }
+  }
+
   &__item-title {
-    font-size: 15px;
-    line-height: 18px;
+    padding-bottom: 4px;
+    font-size: 18px;
+    line-height: 22px;
     font-weight: 700;
     text-transform: uppercase;
     color: $c-royal-blue;
