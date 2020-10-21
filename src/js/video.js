@@ -1,3 +1,4 @@
+const ESC_CODE = 27;
 const html = document.querySelector('html');
 const body = html.querySelector('body');
 const videoPreview = body.querySelector('.spotlight__preview-wrapper');
@@ -10,6 +11,7 @@ const handlePreviewClick = () => {
   html.classList.add('overflow-hidden');
   body.classList.add('overflow-hidden');
   videoPopup.classList.add('popup-show');
+
   video.load();
   video.play();
 };
@@ -25,15 +27,17 @@ const handlePopupClick = (evt) => {
   html.classList.remove('overflow-hidden');
   body.classList.remove('overflow-hidden');
   videoPopup.classList.remove('popup-show');
+
   video.pause();
 };
 
 const handleESCKeydown = (evt) => {
-  if (evt.keyCode !== 27) return false;
+  if (evt.keyCode !== ESC_CODE) return false;
 
   html.classList.remove('overflow-hidden');
   body.classList.remove('overflow-hidden');
   videoPopup.classList.remove('popup-show');
+
   video.pause();
 };
 
