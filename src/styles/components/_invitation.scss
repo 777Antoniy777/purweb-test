@@ -13,6 +13,11 @@
   background-repeat: no-repeat, no-repeat;
   background-color: $c-royal-blue;
 
+  @media (max-width: $media-tb) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
   .site-wrapper {
     display: flex;
     justify-content: space-between;
@@ -41,5 +46,9 @@
     background-color: $c-pizazz;
     border-radius: 4px;
     cursor: pointer;
+
+    @media (max-width: $media-tb) {
+      margin-top: 0;
+    }
   }
 }
