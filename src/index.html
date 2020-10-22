@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8">
     <title>Salt Group</title>
@@ -12,6 +12,10 @@
     <link href="./assets/fonts/ProximaNova-Bold.woff2" as="font" rel="preload" crossorigin="anonymous">
     <link href="./assets/fonts/Raleway-SemiBold.woff2" as="font" rel="preload" crossorigin="anonymous">
     <link href="./assets/fonts/Raleway-ExtraBold.woff2" as="font" rel="preload" crossorigin="anonymous">
+
+    <script>
+      document.documentElement.classList.remove("no-js");
+    </script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </head>
 
@@ -20,10 +24,14 @@
       <div class="site-wrapper">
 
         <nav class="main-header__nav nav">
-          <div class="nav__logo-wrapper">
-            <a>
-              <img class="nav__logo" src="assets/images/svg/logo-header.svg" width="78" height="100" alt="Salt Group logo">
-            </a>
+          <div class="nav__top-menu-wrapper">
+            <div class="nav__logo-wrapper">
+              <a>
+                <img class="nav__logo" src="assets/images/svg/logo-header.svg" width="78" height="100" alt="Salt Group logo">
+              </a>
+            </div>
+
+            <button class="nav__menu-button" type="button" aria-label="Mobile menu"></button>
           </div>
 
           <ul class="nav__list">
