@@ -68,6 +68,8 @@
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
     "imask": "^6.0.5",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "smoothscroll-polyfill": "^0.4.4",
+    "tiny-slider": "^2.9.3"
   }
 }

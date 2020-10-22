@@ -1,0 +1,58 @@
+.nav {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 4px;
+  font-size: 14px;
+  line-height: 18px;
+
+  &__logo-wrapper {
+    min-width: 78px;
+    margin-right: 40px;
+  }
+
+  &__list {
+    @include reset-list;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 892px;
+    margin-top: 32px;
+  }
+
+  &__item {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding: 0 5px 4px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active {
+      border-color: $c-pizazz;
+    }
+
+    a {
+      // hover
+      &:hover,
+      &:focus {
+        opacity: 0.7;
+      }
+
+      // active
+      &:active {
+        opacity: 0.5;
+      }
+
+      &:not([href]) {
+        opacity: 1;
+      }
+    }
+  }
+}
