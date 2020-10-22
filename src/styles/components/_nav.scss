@@ -37,5 +37,22 @@
     &--active {
       border-color: $c-pizazz;
     }
+
+    a {
+      // hover
+      &:hover,
+      &:focus {
+        opacity: 0.7;
+      }
+
+      // active
+      &:active {
+        opacity: 0.5;
+      }
+
+      &:not([href]) {
+        opacity: 1;
+      }
+    }
   }
 }

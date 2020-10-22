@@ -26,7 +26,8 @@
   }
 
   &__twitter-wrapper {
-    min-width: 300px;
+    max-width: 300px;
+    width: 100%;
     height: 295px;
     margin-right: $m-footer-twitter-wrapper-dt * 100% / $w-footer-site-wrapper-dt;
     background-color: white;
@@ -114,6 +115,19 @@
 
       span {
         padding-right: 10px;
+      }
+    }
+
+    a {
+      // hover
+      &:hover,
+      &:focus {
+        opacity: 0.7;
+      }
+
+      // active
+      &:active {
+        opacity: 0.5;
       }
     }
   }

@@ -5,6 +5,10 @@
   line-height: 22px;
   color: $c-gray;
 
+  @media (max-width: $media-tb) {
+    margin-bottom: 50px;
+  }
+
   .site-wrapper {
     padding-left: 16px;
   }
@@ -28,6 +32,12 @@
     text-align: right;
     text-transform: capitalize;
     color: $c-royal-blue;
+
+    @media (max-width: $media-tb) {
+      padding-right: 23px;
+      padding-bottom: 45px;
+      font-size: 40px;
+    }
 
     &::before,
     &::after {
@@ -57,6 +67,10 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     max-width: 914px;
+
+    @media (max-width: $media-tb) {
+      justify-content: space-around;
+    }
   }
 
   &__item {
@@ -64,6 +78,13 @@
     max-width: 285px;
     margin-right: $m-products-item-dt * 100% / $w-products-list-dt;
     margin-bottom: 54px;
+
+    @media (max-width: $media-tb) {
+      max-width: 272px;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
 
     &:nth-child(3n),
     &:last-child {
@@ -78,34 +99,63 @@
     background-position: center;
     background-repeat: no-repeat;
 
+    @media (max-width: $media-dt) {
+      background-size: contain;
+    }
+
     &--device {
       background-image: url("../assets/images/svg/features-1.svg");
       background-size: 142px 146px;
       background-position-x: 40px;
+
+      @media (max-width: $media-dt) {
+        background-size: contain;
+        background-position-x: center;
+      }
     }
 
     &--user {
       background-image: url("../assets/images/svg/features-2.svg");
       background-size: 160px 150px;
       background-position-x: 56px;
+
+      @media (max-width: $media-dt) {
+        background-size: contain;
+        background-position-x: center;
+      }
     }
 
     &--transaction {
       background-image: url("../assets/images/svg/features-3.svg");
       background-size: 150px 150px;
       background-position-x: 60px;
+
+      @media (max-width: $media-dt) {
+        background-size: contain;
+        background-position-x: center;
+      }
     }
 
     &--methods {
       background-image: url("../assets/images/svg/features-4.svg");
       background-size: 132px 139px;
       background-position-x: 57px;
+
+      @media (max-width: $media-dt) {
+        background-size: contain;
+        background-position-x: center;
+      }
     }
 
     &--hsm {
       background-image: url("../assets/images/svg/features-5.svg");
       background-size: 191px 127px;
       background-position-x: 39px;
+
+      @media (max-width: $media-dt) {
+        background-size: contain;
+        background-position-x: center;
+      }
     }
 
     &--iot {
@@ -113,6 +163,12 @@
       background-size: 210px 108px;
       background-position-x: 31px;
       background-position-y: 35px;
+
+      @media (max-width: $media-dt) {
+        background-size: contain;
+        background-position-x: center;
+        background-position-y: center;
+      }
     }
   }
 

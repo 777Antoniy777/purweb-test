@@ -12,6 +12,7 @@
     <link href="./assets/fonts/ProximaNova-Bold.woff2" as="font" rel="preload" crossorigin="anonymous">
     <link href="./assets/fonts/Raleway-SemiBold.woff2" as="font" rel="preload" crossorigin="anonymous">
     <link href="./assets/fonts/Raleway-ExtraBold.woff2" as="font" rel="preload" crossorigin="anonymous">
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </head>
 
   <body class="main-page">
@@ -69,7 +70,7 @@
 
                   <p class="intro__item-description">SALT Group is a world leader in authentication and security. We have a range of services to improve user authentication. Discover the possibilities with SALT.</p>
 
-                  <a class="intro__item-link" href="#">Get started</a>
+                  <a class="button intro__item-link" href="#">Get started</a>
                 </div>
               </li>
 
@@ -79,7 +80,7 @@
 
                   <p class="intro__item-description">SALT Group is a world leader in authentication and security. We have a range of services to improve user authentication. Discover the possibilities with SALT.</p>
 
-                  <a class="intro__item-link" href="#">Get started</a>
+                  <a class="button intro__item-link" href="#">Get started</a>
                 </div>
               </li>
 
@@ -89,24 +90,15 @@
 
                   <p class="intro__item-description">SALT Group is a world leader in authentication and security. We have a range of services to improve user authentication. Discover the possibilities with SALT.</p>
 
-                  <a class="intro__item-link" href="#">Get started</a>
+                  <a class="button intro__item-link" href="#">Get started</a>
                 </div>
             </ul>
 
-            <ul class="intro__control-list">
-              <li class="intro__control-item">
-                <input id="first-control" type="radio" name="control" aria-label="First slide" checked>
-                <label for="first-control"></label>
-              </li>
-              <li class="intro__control-item">
-                <input id="second-control" type="radio" name="control" aria-label="Second slide">
-                <label for="second-control"></label>
-              </li>
-              <li class="intro__control-item">
-                <input id="third-control" type="radio" name="control" aria-label="Third slide">
-                <label for="third-control"></label>
-              </li>
-            </ul>
+            <div class="intro__control-wrapper">
+              <button class="intro__control-button" type="button" aria-label="First slide"></button>
+              <button class="intro__control-button" type="button" aria-label="Second slide"></button>
+              <button class="intro__control-button" type="button" aria-label="Third slide"></button>
+            </div>
           </div>
 
           <div class="intro__scroll-button-wrapper">
@@ -206,7 +198,7 @@
 
             <p class="spotlight__description">Salt mSign Connected Token is a contemporary mobile security 2FA token for authentication of user identity and verification of transactions independent of the delivery channel that initiated the request.</p>
 
-            <a class="spotlight__link" href="#">More info</a>
+            <a class="button spotlight__link" href="#">More info</a>
           </div>
 
           <div class="spotlight__preview-wrapper">
@@ -223,7 +215,7 @@
         <div class="site-wrapper">
           <h2 class="invitation__title">Ready to get started?</h2>
 
-          <a class="invitation__link" href="#">Contact us</a>
+          <a class="button invitation__link" href="#">Contact us</a>
         </div>
       </section>
     </main>
@@ -231,7 +223,9 @@
     <footer class="main__main-footer main-footer">
       <div class="main-footer__contacts-wrapper">
         <div class="site-wrapper">
-          <div class="main-footer__twitter-wrapper"></div>
+          <div class="main-footer__twitter-wrapper">
+            <a class="twitter-timeline" data-lang="en" data-width="300" data-height="295" data-chrome="nofooter noborders" href="https://twitter.com/saltgroup">Salt Group Tweets - Curated tweets by TwitterDev</a>
+          </div>
 
           <div class="main-footer__lists-wrapper">
             <div class="main-footer__list-wrapper">

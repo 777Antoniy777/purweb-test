@@ -5,6 +5,14 @@
   font-weight: 700;
   text-align: center;
 
+  @media (max-width: $media-dt) {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: $media-tb) {
+    margin-bottom: 50px;
+  }
+
   &__title {
     @include visually-hidden;
   }
@@ -15,6 +23,10 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
+    @media (max-width: $media-tb) {
+      justify-content: space-around;
+    }
   }
 
   &__item {
@@ -23,6 +35,10 @@
     margin-right: 26px;
     margin-bottom: 20px;
     color: $c-royal-blue;
+
+    @media (max-width: $media-tb) {
+      margin-right: 0;
+    }
 
     &:last-child {
       margin-right: 0;

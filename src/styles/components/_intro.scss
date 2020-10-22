@@ -49,12 +49,21 @@
   &__item {
     padding-left: 78px;
     padding-bottom: 40px;
+
+    @media (max-width: $media-tb) {
+      padding-right: 30px;
+      padding-left: 20px;
+    }
   }
 
   &__item-wrapper {
     position: relative;
     width: 100%;
     padding-right: 47%;
+
+    @media (max-width: $media-tb) {
+      padding-right: 0;
+    }
 
     &::before {
       content: "";
@@ -66,6 +75,10 @@
       background-image: url("../assets/images/svg/twitter.svg");
       background-position: 0 0;
       background-repeat: no-repeat;
+
+      @media (max-width: $media-tb) {
+        background-image: none;
+      }
     }
   }
 
@@ -80,6 +93,11 @@
     line-height: 58px;
     font-weight: 700;
     text-transform: capitalize;
+
+    @media (max-width: $media-tb) {
+      font-size: 40px;
+      line-height: 44px;
+    }
   }
 
   &__item-description {
@@ -90,21 +108,9 @@
   }
 
   &__item-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 54px;
     width: 174px;
     margin-left: 3px;
-    padding: 5px 10px;
-    font-size: 14px;
-    line-height: 40px;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    background-color: $c-pizazz;
-    border-radius: 4px;
-    cursor: pointer;
   }
 
   &__scroll-button-wrapper {
@@ -170,53 +176,50 @@
   }
 
   // control
-  &__control-list {
+  &__control-wrapper {
     position: absolute;
     top: 78px;
     right: 57px;
+
+    @media (max-width: $media-tb) {
+      right: 10px;
+    }
   }
 
-  &__control-item {
-    margin-bottom: 6px;
+  &__control-button {
+    display: block;
+    width: 14px;
+    height: 18px;
+    margin-bottom: 12px;
+    background-image: url("../assets/images/svg/icon-empty-button.svg");
+    background-size: 14px 18px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    transition: transform 0.3s, opacity 0.3s;
+    cursor: pointer;
 
     &:last-child {
       margin-bottom: 0;
     }
 
-    input {
-      @include visually-hidden;
+    // hover
+    &:hover,
+    &:focus {
+      opacity: 0.7;
     }
 
-    label {
-      display: inline-block;
-      vertical-align: top;
-      width: 14px;
-      height: 18px;
-      background-image: url("../assets/images/svg/icon-empty-button.svg");
-      background-size: 14px 18px;
-      background-position: 0 0;
-      background-repeat: no-repeat;
-      transition: transform 0.3s, opacity 0.3s;
-      cursor: pointer;
-
-      // hover
-      &:hover,
-      &:focus {
-        opacity: 0.7;
-      }
-
-      // active
-      &:active {
-        opacity: 0.7;
-      }
+    // active
+    &:active {
+      opacity: 0.7;
     }
+  }
 
-    // checked
-    input:checked + label,
-    input:focus + label {
-      background-image: url("../assets/images/svg/icon-button.svg");
-      opacity: 1;
-      transform: scale(1.5);
-    }
+  &__control-button.tns-nav-active {
+    background-image: url("../assets/images/svg/icon-button.svg");
+    opacity: 1;
+    transform: scale(1.5);
+    cursor: auto;
   }
 }

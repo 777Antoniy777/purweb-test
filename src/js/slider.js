@@ -2,7 +2,7 @@ import {tns} from "../../node_modules/tiny-slider/src/tiny-slider";
 
 const intro = document.querySelector('.intro');
 const sliderList = intro && intro.querySelector('.intro__list');
-const controlList = intro && intro.querySelector('.intro__control-list');
+const controlList = intro && intro.querySelector('.intro__control-wrapper');
 
 const createSlider = () => {
   if (!sliderList) return false;
