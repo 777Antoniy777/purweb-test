@@ -115,10 +115,6 @@ module.exports = {
   },
   optimization: optimizeBuild(),
   devServer: {
-    // contentBase: path.join(__dirname, `dist`),
-    // open: true,
-    // host: '192.168.0.103',
-    //
     port: 3000,
     hot: isDev,
   },
