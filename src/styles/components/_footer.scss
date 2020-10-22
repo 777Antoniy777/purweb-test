@@ -26,8 +26,7 @@
   }
 
   &__twitter-wrapper {
-    max-width: 300px;
-    width: 100%;
+    min-width: 300px;
     height: 295px;
     margin-right: $m-footer-twitter-wrapper-dt * 100% / $w-footer-site-wrapper-dt;
     background-color: white;
@@ -36,6 +35,12 @@
       order: 1;
       margin-right: 0;
       margin-bottom: 20px;
+    }
+
+    @media (max-width: $media-tb) {
+      min-width: 280px;
+      max-width: 300px;
+      width: 100%;
     }
   }
 

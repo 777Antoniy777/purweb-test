@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   min-height: 216px;
-  padding: 20px 0;
+  padding: 74px 0;
   font-size: 26px;
   line-height: 30px;
   background-image:
@@ -12,6 +12,12 @@
   background-position: center, 50% 43%;
   background-repeat: no-repeat, no-repeat;
   background-color: $c-royal-blue;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image:
+      linear-gradient(to right, rgba($c-royal-blue, 0.8) 0%, rgba($c-royal-blue, 0.8) 100%),
+      url("../assets/images/overlay@2x.jpg");
+  }
 
   @media (max-width: $media-tb) {
     font-size: 16px;

@@ -76,6 +76,10 @@
     background-repeat: no-repeat;
     cursor: pointer;
 
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../assets/images/preview@2x.jpg");
+    }
+
     @media (max-width: $media-tb) {
       max-height: none;
       height: 250px;
